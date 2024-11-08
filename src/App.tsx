@@ -56,7 +56,13 @@ const App: React.FC = () => {
   }, [hovered]);
 
   const handleModelsClick = () => {
-    if (threeContainer.current) web3DObj.current?.openProject();
+    if (threeContainer.current) {
+      web3DObj.current?.openProject();
+    }
+  };
+
+  const handleViewClick = () => {
+    web3DObj.current?.setOrientation(web3DObj.current?.VIEW_TOP);
   };
 
   return (
@@ -68,7 +74,8 @@ const App: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl font-[bld]">B</h1>
 
           <div className="flex text-2xl sm:text-[1.2vw] font items-center gap-10">
-            <p className="hidden sm:block">HOME</p>
+            <p  className="hidden sm:block pointer-events-auto cursor-pointer"
+              onClick={handleViewClick}>HOME</p>
             <p className="hidden sm:block">DIVO</p>
             <p
               className="hidden sm:block pointer-events-auto cursor-pointer"

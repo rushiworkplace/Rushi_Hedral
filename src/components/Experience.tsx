@@ -13,7 +13,7 @@ type ExperienceProps = {
 };
 
 // Define the types for the exported variables
-export let web3DObj: React.MutableRefObject<Web3D | null>;
+export let web3DObj: any | null;
 export let threeContainer: any | null;
 
 const Experience: React.FC<ExperienceProps> = ({ hovered, setHovered, color, pos, sceneRef }) => {
