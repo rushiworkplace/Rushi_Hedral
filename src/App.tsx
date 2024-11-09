@@ -21,7 +21,7 @@ const colors: Color[] = [
   { col: "#C0C0C0" },
 ];
 
-const App: React.FC = () => {
+const App = () => {
   const [hovered, setHovered] = useState<boolean>(false);
   const [color, setColor] = useState<string>("cyan");
   const text = useRef<HTMLHeadingElement>(null);

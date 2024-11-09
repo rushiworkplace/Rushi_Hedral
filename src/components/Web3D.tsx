@@ -65,6 +65,7 @@ class Web3D {
     sceneBoundingBoxIndicator : any|null;
     extension : any|null;
     TWEEN : any|null;
+    mouse : any|null;
 
     constructor() {
         threeContainer.current = document.getElementById("3d-container");
@@ -118,6 +119,7 @@ class Web3D {
         this.sceneBoundingBoxIndicator = null,
         this.extension = null;
         this.TWEEN = null;
+        this.mouse = null
 
         web3DObj.current = this;
         this.init();
@@ -206,6 +208,9 @@ class Web3D {
         this.composer.addPass(this.edgeEffect); */
        // var reflections = new Reflections();
        // this.ssrComposer = reflections.addReflections(this.scene, this.camera, this.renderer);
+       this.mouse = new THREE.Vector2();
+       this.mouse.x = 0;
+       this.mouse.y = 0;
 
        this.animate(0);
 
